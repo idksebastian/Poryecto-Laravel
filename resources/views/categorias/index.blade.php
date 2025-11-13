@@ -13,7 +13,7 @@
         <thead class="bg-gray-800 text-white">
             <tr>
                 <th class="py-3 px-4 text-left">ID</th>
-                <th class="py-3 px-4 text-left">NOMBRE</th>
+                <th class="py-3 px-4 text-left">Nombre</th>
                 <th class="py-3 px-4 text-left">Descripcion</th>
                 <th class="py-3 px-4 text-left">Acciones</th>
 
