@@ -12,7 +12,7 @@
         @method('PUT')
         @include('categorias.form', ['categoria' => $categoria])
         <button type="submit" class="w-full bg-blue-600 hover:bg-blue-800 text-white font-semibold py-2 px-4 rounded-lg transition cursor-pointer">
-                Actualizar
+                ACTUALIZAR
         </button>
         <button route="categoria.index" class="w-full mt-2 bg-red-600 hover:bg-red-800 text-white font-semibold py-2 px-4 rounded-lg transition cursor-pointer">
             Cancelar

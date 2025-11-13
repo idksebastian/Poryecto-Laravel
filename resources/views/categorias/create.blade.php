@@ -10,7 +10,7 @@
         @csrf
         <div class="block gap-2">
             <div>
-            <label for="nombre" class="block text-gray-700 font-medium mb-1 min-w-l">Nombre</label>
+            <label for="nombre" class="block text-gray-700 font-medium mb-1 min-w-l">NOMBRE</label>
             <input type="text" id="nombre" name="nombre" 
                    class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 min-w">
         </div>
