@@ -53,7 +53,7 @@ class CategoriaController extends Controller
         $categoria = \App\Models\Categoria::findOrFail($id);
         return view('categorias.edit', compact('categoria'));
     }
-    
+
 
     /**
      * Update the specified resource in storage.
@@ -65,7 +65,7 @@ class CategoriaController extends Controller
             'descripcion' => 'nullable|string',
         ]);
 
-        $categoria = \App\Models\Producto::findOrFail($id);
+        $categoria = \App\Models\Categoria::findOrFail($id);    
         $categoria->update($data);
 
         return redirect()->route('categorias.index')->with('ok', 'Categoria actualizada.');
@@ -76,6 +76,11 @@ class CategoriaController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $categoria = \App\Models\Categoria::findOrFail($id);
+        if ($categoria->productos()->exists()) {
+            return redirect()->route('categorias.index')->with('error', 'No se puede eliminar la categoría porque contiene productos.');
+        }
+        $categoria->delete();
+        return redirect()->route('categorias.index')->with('ok', 'Categoria eliminada.');
     }
 }

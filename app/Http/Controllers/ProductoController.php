@@ -42,7 +42,7 @@ class ProductoController extends Controller
 
         Producto::create($data);
 
-        return redirect()->route('productos.index')->with('Ok', 'Producto creado.');
+        return redirect()->route('productos.index') ->with('ok', 'Producto creado.');
     }
 
     /**
@@ -59,7 +59,8 @@ class ProductoController extends Controller
     public function edit(string $id)
     {
         $producto = \App\Models\Producto::findOrFail($id);
-        return view('productos.edit', compact('producto'));
+        $categorias = \App\Models\Categoria::all();
+        return view('productos.edit', compact('producto', 'categorias'));
     }
 
     /**
@@ -67,11 +68,14 @@ class ProductoController extends Controller
      */
     public function update(Request $request, string $id)
     {
+        
         $data = $request->validate([
             'nombre' => 'required|string|max:255',
             'descripcion' => 'nullable|string',
             'precio' => 'required|numeric|min:0',
             'stock' => 'required|integer|min:0',
+            'categoria_id' => 'required|exists:categorias,id', 
+
         ]);
 
         $producto = \App\Models\Producto::findOrFail($id);

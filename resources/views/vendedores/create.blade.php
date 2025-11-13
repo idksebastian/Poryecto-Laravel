@@ -10,26 +10,22 @@
         @csrf
         <div>
             <label for="nombre" class="block text-gray-700 font-medium mb-1">Nombre</label>
-            <input type="text" id="nombre" name="nombre" 
-                   class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            <input type="text" id="nombre" name="nombre" required class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500">
         </div>
 
         <div class="flex gap-4">
             <div>
             <label for="cargo" class="block text-gray-700 font-medium mb-1">Cargo</label>
-            <input type="text" id="cargo" name="cargo"
-                   class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            <input type="text" id="cargo" name="cargo" required class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500">
         </div>
 
         <div>
             <label for="telefono" class="block text-gray-700 font-medium mb-1">Teléfono</label>
-            <input type="number" id="telefono" name="telefono"
-                   class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            <input type="number" id="telefono" name="telefono" required class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500">
         </div>
         </div>
 
-        <button type="submit" 
-                class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded-lg transition cursor-pointer">
+        <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded-lg transition cursor-pointer">
             Guardar
         </button>
     </form>

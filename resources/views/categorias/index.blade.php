@@ -26,11 +26,10 @@
                 <td class="py-2 px-4">{{ $cat->nombre }}</td>
                 <td class="py-2 px-4">{{ $cat->descripcion }}</td>
                 <td class="py-2 px-4 flex gap-2">
-                    <a href="{{ route('categorias.edit', $cat) }}" 
-                       class="bg-transparent border border-blue-600 border-solid border-1 text-blue-600 hover:bg-blue-600 hover:text-white text-sm font-medium py-1 px-3 rounded transition cursor-pointer">
+                    <a href="{{ route('categorias.edit', $cat) }}" class="bg-transparent border border-blue-600 border-solid border-1 text-blue-600 hover:bg-blue-600 hover:text-white text-sm font-medium py-1 px-3 rounded transition cursor-pointer">
                         Editar
                     </a>
-                    <form action="{{ route('categorias.destroy', $cat) }}" method="post" onsubmit="return confirm('¿Desea Eliminar?')">
+                    <form action="{{ route('categorias.destroy', $cat) }}" method="post" onsubmit="return confirm('¿Desea Eliminar {{ $cat->nombre }} ?')">
                         @csrf
                         @method('DELETE')
                         <button class="bg-transparent border border-red-600 border-solid border-1 text-red-600 hover:bg-red-600 hover:text-white text-sm font-medium py-1 px-3 rounded transition cursor-pointer" type="submit" >Eliminar</button>
@@ -43,7 +42,7 @@
 </div>
 @else
     <div class="bg-blue-100 border border-blue-400 text-blue-700 px-4 py-3 rounded">
-        No hay categorias registrados.
+        No hay categorias registradas.
     </div>
 @endif
 @endsection

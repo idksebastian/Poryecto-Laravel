@@ -4,7 +4,7 @@
 @section('nav-titulo', 'Vendedores')
 @section('contenido')
 <div class="my-10 flex justify-end">
-    <a href="{{ route('vendedores.create') }}" class="p-4 bg-blue-600 rounded text-white font-xl font-semibold hover:bg-blue-700">Nuevo +</a>
+    <a href="{{ route('vendedores.create') }}" class="p-4 bg-transparent border-blue-600 border-solid border-2 text-blue-600 hover:bg-blue-600 hover:text-white font-bold rounded-xl">Nuevo +</a>
 </div>
 @if($vendedores->count())
 
@@ -28,13 +28,13 @@
                 <td class="py-2 px-4">{{ $vend->telefono }}</td>
                 <td class="py-2 px-4 flex gap-2">
                     <a href="{{ route('vendedores.edit', $vend) }}" 
-                       class="bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium py-1 px-3 rounded transition cursor-pointer">
+                       class="bg-transparent border border-blue-600 border-solid border-1 text-blue-600 hover:bg-blue-600 hover:text-white text-sm font-medium py-1 px-3 rounded transition cursor-pointer">
                         Editar
                     </a>
-                    <form action="{{ route('vendedores.destroy', $vend) }}" method="post" onsubmit="return confirm('¿Desea Eliminar?')">
+                    <form action="{{ route('vendedores.destroy', $vend) }}" method="post" onsubmit="return confirm('¿Desea Eliminar al vendedor {{ $vend->nombre }}?')">
                         @csrf
                         @method('DELETE')
-                        <button class="bg-red-600 hover:bg-red-700 text-white text-sm font-medium py-1 px-3 rounded transition cursor-pointer" type="submit" >Eliminar</button>
+                        <button class="bg-transparent border border-red-600 border-solid border-1 text-red-600 hover:bg-red-600 hover:text-white text-sm font-medium py-1 px-3 rounded transition cursor-pointer" type="submit" >Eliminar</button>
                     </form>
                 </td>
             </tr>

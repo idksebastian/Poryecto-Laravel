@@ -6,7 +6,7 @@
 
 <div class="min-h-screen flex items-center justify-center">
     <div class="mx-auto bg-white p-6 rounded-lg shadow-md border-1 border-black min-w-4xl w-full">
-        <h1 class="text-xl font-semibold mb-4 text-black text-center">Editar Producto</h1>
+        <h1 class="text-xl font-semibold mb-4 text-black text-center">Editar Categoria</h1>
         <form action="{{ route('categorias.update', ['categoria' => $categoria]) }}" method="post">
         @csrf
         @method('PUT')

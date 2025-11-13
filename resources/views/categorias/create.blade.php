@@ -11,17 +11,14 @@
         <div class="block gap-2">
             <div>
             <label for="nombre" class="block text-gray-700 font-medium mb-1 min-w-l">Nombre</label>
-            <input type="text" id="nombre" name="nombre" 
-                   class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 min-w">
+            <input type="text" id="nombre" name="nombre" required class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 min-w">
         </div>
         <div>
             <label for="descripcion" class="block text-gray-700 font-medium mb-1 min-w-xl">Descripción</label>
-            <textarea id="descripcion" name="descripcion" rows="4"
-                      class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+            <textarea id="descripcion" name="descripcion"  required rows="4" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
         </div>
 
-        <button type="submit" 
-                class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded-lg transition cursor-pointer">
+        <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded-lg transition cursor-pointer">
             Guardar
         </button>
     </form>
